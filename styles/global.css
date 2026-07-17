@@ -1,0 +1,202 @@
+/* ==========================================================================
+   1. DESIGN TOKENS & SYSTEM THEMES
+   ========================================================================== */
+
+:root {
+    /* --- Typography Tokens --- */
+    --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* --- Fluid Type Scale (Min: 320px -> Max: 1240px) --- */
+    --step--2: clamp(0.69rem, calc(0.66rem + 0.17vw), 0.80rem);
+    --step--1: clamp(0.83rem, calc(0.78rem + 0.27vw), 1.00rem);
+    --step-0: clamp(1.00rem, calc(0.91rem + 0.43vw), 1.25rem);
+    --step-1: clamp(1.20rem, calc(1.07rem + 0.67vw), 1.56rem);
+    --step-2: clamp(1.44rem, calc(1.24rem + 0.99vw), 1.95rem);
+    --step-3: clamp(1.73rem, calc(1.44rem + 1.44vw), 2.44rem);
+    --step-4: clamp(2.07rem, calc(1.66rem + 2.07vw), 3.05rem);
+    --step-5: clamp(2.49rem, calc(1.92rem + 2.93vw), 3.82rem);
+
+    /* --- Spacing Scale (Fluid ratios) --- */
+    --space-xs: clamp(0.50rem, calc(0.43rem + 0.33vw), 0.69rem);
+    --space-s: clamp(0.75rem, calc(0.65rem + 0.49vw), 1.03rem);
+    --space-m: clamp(1.00rem, calc(0.87rem + 0.65vw), 1.38rem);
+    --space-l: clamp(1.50rem, calc(1.30rem + 0.98vw), 2.06rem);
+    --space-xl: clamp(2.00rem, calc(1.74rem + 1.30vw), 2.75rem);
+    --space-2xl: clamp(3.00rem, calc(2.61rem + 1.96vw), 4.13rem);
+
+    /* --- Animation / Transitions --- */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-fast: 200ms var(--ease-out-expo);
+    --transition-normal: 400ms var(--ease-out-expo);
+
+    /* --- Layout Bounds --- */
+    --max-width: 75rem; /* 1200px */
+}
+
+/* --- Dark Mode (Default Theme Profile) --- */
+:root, html[data-theme="dark"] {
+    color-scheme: dark;
+    --color-bg: #0d0f12;
+    --color-surface: #161920;
+    --color-surface-hover: #1e222b;
+    --color-border: #242936;
+    --color-text-primary: #f1f5f9;
+    --color-text-secondary: #94a3b8;
+    --color-text-muted: #64748b;
+    --color-accent: #689f38; /* Vibrant Sage */
+    --color-accent-hover: #7cb342;
+    --color-accent-alpha: rgba(104, 159, 56, 0.15);
+    --focus-ring: 0 0 0 3px rgba(104, 159, 56, 0.5);
+}
+
+/* --- Light Mode (Override Profile) --- */
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+        color-scheme: light;
+        --color-bg: #f8f9fa;
+        --color-surface: #ffffff;
+        --color-surface-hover: #f1f5f9;
+        --color-border: #e2e8f0;
+        --color-text-primary: #0f172a;
+        --color-text-secondary: #64748b;
+        --color-text-muted: #94a3b8;
+        --color-accent: #33691e; /* Deep Sage */
+        --color-accent-hover: #558b2f;
+        --color-accent-alpha: rgba(51, 105, 30, 0.1);
+        --focus-ring: 0 0 0 3px rgba(51, 105, 30, 0.4);
+    }
+}
+
+html[data-theme="light"] {
+    color-scheme: light;
+    --color-bg: #f8f9fa;
+    --color-surface: #ffffff;
+    --color-surface-hover: #f1f5f9;
+    --color-border: #e2e8f0;
+    --color-text-primary: #0f172a;
+    --color-text-secondary: #64748b;
+    --color-text-muted: #94a3b8;
+    --color-accent: #33691e;
+    --color-accent-hover: #558b2f;
+    --color-accent-alpha: rgba(51, 105, 30, 0.1);
+    --focus-ring: 0 0 0 3px rgba(51, 105, 30, 0.4);
+}
+
+
+/* ==========================================================================
+   2. MODERN UTILITY RESET
+   ========================================================================== */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+    margin: 0;
+}
+
+ul[class], ol[class] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    /* Prevent font size adjustments after orientation changes in iOS */
+    -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.6;
+    font-family: var(--font-body);
+    font-size: var(--step-0);
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    overflow-x: hidden;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+img, picture, svg, video, canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+
+/* ==========================================================================
+   3. GLOBAL ACCESSIBILITY & UTILITIES
+   ========================================================================== */
+
+/* --- Focus Rings (A11y Strategy) --- */
+*:focus {
+    outline: none;
+}
+
+*:focus-visible {
+    outline: 2px solid transparent;
+    box-shadow: var(--focus-ring);
+    border-radius: 4px;
+}
+
+/* --- Skip Link --- */
+.skip-link {
+    position: absolute;
+    top: calc(-1 * var(--space-xl));
+    left: var(--space-m);
+    background: var(--color-accent);
+    color: #ffffff;
+    padding: var(--space-xs) var(--space-m);
+    z-index: 9999;
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: var(--step--1);
+    border-radius: 0 0 4px 4px;
+    transition: top var(--transition-fast);
+}
+
+.skip-link:focus-visible {
+    top: 0;
+}
+
+
+/* ==========================================================================
+   4. LAYOUT LANDMARKS STRUCTURE
+   ========================================================================== */
+
+main {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-m);
+}
+
+section {
+    padding: var(--space-2xl) 0;
+}
+
+/* Screen Reader Only Utility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

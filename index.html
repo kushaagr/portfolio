@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Engineer Portfolio</title>
+    <meta name="description" content="Architecture, systems, and interfaces by a professional UI Engineer.">
+    
+    <!-- Typography Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Global Styles & Tokens -->
+    <link rel="stylesheet" href="styles/global.css">
+    
+    <!-- Entry Script for Web Components Assembly -->
+    <script type="module" src="js/app.js" defer></script>
+</head>
+<body>
+    <!-- Skip Link for Keyboard Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Universal Structural Layout Shell -->
+    <header role="banner">
+        <portfolio-nav></portfolio-nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section id="hero" aria-label="Introduction">
+            <portfolio-hero></portfolio-hero>
+        </section>
+
+        <section id="work" aria-label="Selected Engineering Work">
+            <portfolio-projects></portfolio-projects>
+        </section>
+
+        <section id="experience" aria-label="Technical Experience">
+            <portfolio-experience></portfolio-experience>
+        </section>
+
+        <section id="contact" aria-label="Get in Touch">
+            <portfolio-contact></portfolio-contact>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <portfolio-footer></portfolio-footer>
+    </footer>
+</body>
+</html>
