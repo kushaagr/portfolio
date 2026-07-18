@@ -1,5 +1,7 @@
+import { html } from "../../core/html.js";
+
 const template = document.createElement('template');
-template.innerHTML = `
+template.innerHTML = html`
   <style>
     :host {
       display: block;
@@ -137,7 +139,7 @@ template.innerHTML = `
         I bridge the gap between heavy engineering requirements and pixel-perfect design accuracy. Specializing in advanced CSS architectures, standard Web Components, and automated performance profiles.
       </p>
       <div class="action-group">
-        <a href="#work" class="btn btn-primary">Inspect System Work</a>
+        <a href="#work" class="btn btn-primary">Inspect My Work</a>
         <button class="btn btn-secondary" id="blueprint-toggle" aria-pressed="false">
           Toggle Inspector Dev Mode
         </button>
