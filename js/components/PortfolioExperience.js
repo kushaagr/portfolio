@@ -11,10 +11,10 @@ class PortfolioExperience extends HTMLElement {
     this.experiences = [
       {
         role: "Frontend Developer Intern",
-        company: "Yarasi Tech",
-        duration: "May 2024 – Dec 2024",
+        company: "Vivada Tech",
+        duration: "May 2024 – Nov 2024",
         location: "Remote",
-        stack: ["React Native", "GraphQL", "Zustand", "Push API"],
+        stack: ["React Native", "GraphQL", "Zustand"],
         details: [
           "Engineered modular, reusable mobile application architectures for peer-to-peer video streaming platforms consuming unified GraphQL endpoints.",
           "Shipped clean layout implementations supporting complex asynchronous data layers, device-level push notification handlers, and runtime multilingual localization matrices.",

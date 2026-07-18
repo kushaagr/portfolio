@@ -14,28 +14,28 @@ class PortfolioProjects extends HTMLElement {
         title: "Stable Diffusion + ControlNet Pipeline",
         stack: ["Python", "Diffusers", "ControlNet", "W&B", "Accelerate"],
         description: "Engineered a color-guided generative image pipeline by training ControlNet architectures. Optimized multi-GPU acceleration schedules and validated structural color distribution fidelity using Mean ΔE, Earth Mover’s Distance (EMD), and CLIP alignment scoring arrays.",
-        inspectUrl: "https://colab.research.google.com/drive/18ieCcmu9dZzbMnaH6c5ZJDC50O5iEvQR?usp=sharing" // Both links provided -> Shows both
+        inspectUrl: "https://colab.research.google.com/drive/18ieCcmu9dZzbMnaH6c5ZJDC50O5iEvQR?usp=sharing",
       },
       {
         title: "LoRA Fine-Tuning ViLT (VQA)",
         stack: ["PyTorch", "Hugging Face", "PEFT", "LoRA", "Gemini API"],
         description: "Synthesized a custom 3K image-question-answer training set using Gemini 1.5 Flash over foundational engine objects. Executed parameter-efficient fine-tuning (PEFT) on TPU clusters under strict system memory limits, yielding massive performance gains over baseline models.",
         sourceUrl: "",
-        inspectUrl: "" // Empty string -> Hides the 'Inspect' button
+        inspectUrl: "",
       },
       {
         title: "Search Everywhere Aggregator",
         stack: ["Node.js", "Express.js", "JavaScript", "REST APIs"],
         description: "Developed a low-latency data aggregation framework pulling real-time metrics across diverse remote nodes into a single, highly accessible interface optimized for keyboard-driven focus tracking.",
-        sourceUrl: "https://github.com/kushaagr/search-everywhere", // Empty string -> Hides the 'Source' button
-        inspectUrl: "https://www.linkedin.com/posts/kushaagr_coding-projectshowcase-backend-activity-7186783104424894464-LiD5" 
+        sourceUrl: "https://github.com/kushaagr/search-everywhere",
+        inspectUrl: "https://www.linkedin.com/posts/kushaagr_coding-projectshowcase-backend-activity-7186783104424894464-LiD5",
       },
       {
         title: "Event Timeline Engine",
         stack: ["Next.js", "TypeScript", "React", "MongoDB"],
         description: "Built a structural vector timeline application featuring an interactive rendering pipeline, isolated component architecture, and optimized server-side query persistence.",
-        sourceUrl: "", // Both empty -> Entire action-row container stays hidden
-        inspectUrl: ""
+        sourceUrl: "", 
+        inspectUrl: "",
       }
     ];
 
