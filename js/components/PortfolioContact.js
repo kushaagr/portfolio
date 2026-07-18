@@ -1,4 +1,4 @@
-import { html } from "../../core/html.js";
+import { html } from "../core/html.js";
 
 const template = document.createElement('template');
 template.innerHTML = html`
