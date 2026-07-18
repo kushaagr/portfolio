@@ -28,7 +28,7 @@ class PortfolioProjects extends HTMLElement {
         stack: ["Node.js", "Express.js", "JavaScript", "REST APIs"],
         description: "Developed a low-latency data aggregation framework pulling real-time metrics across diverse remote nodes into a single, highly accessible interface optimized for keyboard-driven focus tracking.",
         sourceUrl: "https://github.com/kushaagr/search-everywhere", // Empty string -> Hides the 'Source' button
-        inspectUrl: "#" 
+        inspectUrl: "https://www.linkedin.com/posts/kushaagr_coding-projectshowcase-backend-activity-7186783104424894464-LiD5" 
       },
       {
         title: "Event Timeline Engine",
