@@ -90,7 +90,7 @@ template.innerHTML = `
       align-items: center;
       gap: var(--space-s);
       border-left: 1px solid var(--color-border);
-      padding-left: var(--space-s);
+      padding-inline: var(--space-l);
     }
 
     .theme-toggle {
@@ -126,14 +126,15 @@ template.innerHTML = `
   <div class="nav-wrapper" id="navShell">
     <nav class="nav-container" aria-label="Main System Navigation">
       <a href="#" class="nav-brand" aria-label="Portfolio Home">
-        <span class="brand-terminal">&lt;UI&gt;</span> Engineer.
+        <span class="brand-terminal">KUSHAGRA</span> MEHROTRA // Dev
       </a>
 
       <div class="nav-menu">
         <ul class="nav-list">
+          <!-- <li><a href="#work" class="nav-link">Research & Work</a></li> -->
           <li><a href="#work" class="nav-link">Work</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#experience" class="nav-link">Timeline</a></li>
+          <li><a href="#contact" class="nav-link">Connect</a></li>
         </ul>
 
         <div class="action-controls">
@@ -216,7 +217,9 @@ class PortfolioNav extends HTMLElement {
   applyThemeState(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     // Render technical icon variants based on selection
-    this.themeBtn.textContent = theme === 'dark' ? '☾' : '☼';
+    // this.themeBtn.textContent = theme === 'dark' ? '☾' : '☼';
+    // this.themeBtn.textContent = theme === 'dark' ? '🌚' : '☀️';
+    this.themeBtn.textContent = theme === 'dark' ? '🌙' : '☀️';
     this.themeBtn.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
   }
 }

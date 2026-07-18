@@ -128,7 +128,7 @@ template.innerHTML = `
     <div class="footer-block">
       <div class="brand-signature">&lt;KUSHAAGR /&gt;</div>
       <p class="license-notice">
-        Built completely with standardized modular custom elements. Code licensed under MIT. System conceptualization © 2026.
+        Built completely with standardized modular custom elements. System conceptualization © 2026.
       </p>
     </div>
 
