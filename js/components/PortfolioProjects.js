@@ -20,7 +20,7 @@ class PortfolioProjects extends HTMLElement {
         title: "LoRA Fine-Tuning ViLT (VQA)",
         stack: ["PyTorch", "Hugging Face", "PEFT", "LoRA", "Gemini API"],
         description: "Synthesized a custom 3K image-question-answer training set using Gemini 1.5 Flash over foundational engine objects. Executed parameter-efficient fine-tuning (PEFT) on TPU clusters under strict system memory limits, yielding massive performance gains over baseline models.",
-        sourceUrl: "",
+        sourceUrl: "https://github.com/ankit-gahlawat-007/VR_Project2_Ankit_Gahlawat_PH2024002",
         inspectUrl: "",
       },
       {
