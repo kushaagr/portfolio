@@ -33,7 +33,6 @@ template.innerHTML = html`
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 100%;
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 0 var(--space-m);
